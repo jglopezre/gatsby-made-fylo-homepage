@@ -1,0 +1,20 @@
+@use '../../styles/colors.scss';
+
+.nav-bar {
+    padding: {
+        top: 2rem;
+        bottom: 2rem;
+    }
+}
+
+.nav-link {
+    text-decoration: none;
+    color: colors.$primary-color-01;
+    transition: 0.3s;
+    &:hover {
+        text-decoration: none;
+        color: colors.$accent-color-01;
+        transform: scale(1.2);
+    }
+}
+

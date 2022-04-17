@@ -1,0 +1,40 @@
+@use '../../styles/colors.scss';
+
+.ul-format{
+    li {
+        list-style: none;
+        line-height: 2rem;
+    }
+}
+
+.link-format {
+    text-decoration: none;
+    color: colors.$neutral-color-01;
+    transition: 0.2s;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.footer-wrapper {
+    background-color: colors.$primary-color-01;
+    padding: {
+        top: 6rem;
+        bottom: 4rem;
+    }
+}
+
+.contact-table {
+    tr {
+        td {
+            color:white;
+            &:nth-child(1) {
+                padding-top: 0.8rem;
+            }
+            &:nth-child(2) {
+                padding-left: 1.2rem;
+            }
+            
+        }
+    }
+}
