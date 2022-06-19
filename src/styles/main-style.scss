@@ -1,18 +1,6 @@
 @use './colors.scss';
 //General Font
 
-@font-face {
-    font-family: 'Raleway';
-    src: url(../fonts/Raleway/static/Raleway-Regular.ttf);
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url(../fonts/Raleway/static/Raleway-Bold.ttf);
-    font-weight: bold;
-}
-
 html, body {
     width: 100%;
     font-size: 16px;
@@ -20,10 +8,36 @@ html, body {
 
 body {
     font-family: 'Raleway', sans-serif;
-    border: solid 2px purple;
 }
 
 footer {
     background-color: colors.$primary-color-01;
     width: 100%;
 }
+
+h1 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+}
+
+
+
+/* .sectionTwo {
+    background-color: colors.$neutral-color-01;
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height:100px;
+        left: 0;
+        top: -100px;
+        background-image: url(../images/bg-curve-desktop.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+} */

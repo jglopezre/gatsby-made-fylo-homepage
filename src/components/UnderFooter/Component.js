@@ -11,7 +11,7 @@ const UnderFooter = () => {
             <div>
                 Challenge by <a href='https://www.frontendmentor.io?ref=challenge' target='_blank'>Frontend Mentor</a>
                 {' '}
-                Coded by <a href="javierlo.site" target='_blank'>Javier Lopez.</a>
+                Coded by <a href="https://javierlo.site" target='_blank'>Javier Lopez.</a>
             </div>
         </Container>
     )
