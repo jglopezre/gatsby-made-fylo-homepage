@@ -2,7 +2,9 @@ import React from 'react';
 
 const socialBox = () => {
   return (
-    <div></div>
+    <div>
+      
+    </div>
   )
 }
 
