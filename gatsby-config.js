@@ -31,6 +31,6 @@ module.exports = {
           families: ['Raleway:400,700']
         }
       }
-    }
+    },
   ]
 };

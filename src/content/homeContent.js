@@ -36,11 +36,38 @@ const HomeContent = () => {
         registerSection: {
             title: 'Get access early today',
             paragraph: 'It only takes a minute  to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.'
-        }
-    }
+        },
+
+        carouselContent: [
+            {
+                paragraph: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
+                fullName: 'Kyle Burton',
+                position: 'Founder & CEO, Huddle',
+                picture: ''
+            },
+            {
+                paragraph: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
+                fullName: 'Claire Redfield',
+                position: 'Designer',
+                picture: ''
+            },
+            {
+                paragraph: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
+                fullName: 'Albert Wesker',
+                position: 'Copywriter',
+                picture: ''
+            },
+            {
+                paragraph: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
+                fullName: 'Jill Valentine',
+                position: 'CEO, Umbrella',
+                picture: ''
+            }
+        ]
+    };
 
     return content;
-}
+};
 
 export default HomeContent;
 
