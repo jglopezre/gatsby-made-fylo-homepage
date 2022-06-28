@@ -12,6 +12,26 @@ const HomeContent = () => {
                 illustrationTwo: file(relativePath: {eq: "illustration-2.svg"}) {
                     publicURL
                 }
+                avatarPicture01: file(relativePath: {eq: "avatar-testimonial-1.jpg"}) {
+                    childImageSharp {
+                        gatsbyImageData(width: 72, placeholder: BLURRED, formats: JPG)
+                    }
+                }
+                avatarPicture02: file(relativePath: {eq: "avatar-testimonial-2.jpg"}) {
+                    childImageSharp {
+                        gatsbyImageData(width: 72, placeholder: BLURRED, formats: JPG)
+                    }
+                }
+                avatarPicture03: file(relativePath: {eq: "avatar-testimonial-3.jpg"}) {
+                    childImageSharp {
+                        gatsbyImageData(width: 72, placeholder: BLURRED, formats: JPG)
+                    }
+                }
+                avatarPicture04: file(relativePath: {eq: "avatar-testimonial-4.jpg"}) {
+                    childImageSharp {
+                        gatsbyImageData(width: 72, placeholder: BLURRED, formats: JPG)
+                    }
+                }
             }
         `
     );
@@ -43,25 +63,25 @@ const HomeContent = () => {
                 paragraph: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
                 fullName: 'Kyle Burton',
                 position: 'Founder & CEO, Huddle',
-                picture: ''
+                picture: data.avatarPicture01
             },
             {
-                paragraph: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
+                paragraph: 'The biggest benefit is that I’ve been able to integrate my value for family time with my business. The last 5 months I’ve been running my business without a computer because I have Fylo on my phone. Taking this step was a big risk, but it’s paid off',
                 fullName: 'Claire Redfield',
                 position: 'Designer',
-                picture: ''
+                picture: data.avatarPicture02
             },
             {
-                paragraph: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
-                fullName: 'Albert Wesker',
-                position: 'Copywriter',
-                picture: ''
-            },
-            {
-                paragraph: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
+                paragraph: 'We absolutely love Fylo. It has speed up our getting file cycle from large hours to instantaneous. As soon as a job is done, our techs can take files and collect data, right from the field. We are winning more jobs with Fylo',
                 fullName: 'Jill Valentine',
                 position: 'CEO, Umbrella',
-                picture: ''
+                picture: data.avatarPicture03
+            },
+            {
+                paragraph: 'It is easy to use and easy to speak to an actual person if you have questions or problems. The mobile app works well, especially on our tablets. The on-the-spot customer service…UNBEATABLE! ',
+                fullName: 'Albert Wesker',
+                position: 'Copywriter',
+                picture: data.avatarPicture04
             }
         ]
     };

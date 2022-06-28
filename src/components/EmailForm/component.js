@@ -3,7 +3,6 @@ import { Form, FormGroup, Row, Col, Button, Label, Input } from 'reactstrap';
 import { actButton, inputBox, warningText, warningTextField, warningOn } from './style.module.scss';
 
 const EmailForm = () => {
-
   const [ inputValue, setInputValue ] = useState('');
   
   const [{ warningTextState, inputStyle }, setWarningState] = useState({

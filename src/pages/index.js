@@ -37,13 +37,12 @@ const IndexPage = ({ data }) => {
     
     if( width <= 564 ) {
       return data.mobileCurve.publicURL
-    }
+    };
 
     if ( width > 564 ){
       return data.desktopCurve.publicURL
-    }
-
-  }
+    };
+  };
   
   return (
     <>

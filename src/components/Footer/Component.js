@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { Container, Row, Col } from "reactstrap";
-//import SocialButtonBox from '../SocialButtonBox/Component';
+import SocialBox from '../SocialBox/Component';
 import { ulFormat, linkFormat, footerWrapper, contactTable } from './style.module.scss';
 
 const FooterComponent = () => {
-    
     const data = useStaticQuery(graphql `
         query {
             logoWhite: file(relativePath: {eq: "logo-white.svg"}) {
@@ -59,7 +58,7 @@ const FooterComponent = () => {
                 </Col>
                 
                 <Col lg={{size: 3}}>
-                    {/* <SocialButtonBox /> */}
+                    <SocialBox />
                 </Col>
             </Row>
         </Container>
