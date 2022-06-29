@@ -58,7 +58,7 @@ const FooterComponent = () => {
                 </Col>
                 
                 <Col lg={{size: 3}}>
-                    <SocialBox />
+                    <SocialBox socialIcons={{ twitter: true, instagram: true, facebook: true }}/>
                 </Col>
             </Row>
         </Container>
