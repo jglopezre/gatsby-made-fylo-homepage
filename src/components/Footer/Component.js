@@ -43,18 +43,18 @@ const FooterComponent = () => {
 
                     <Col lg={{size: 3}}>
                         <ul className={ ulFormat }>
-                            <li><Link className={ linkFormat }to='/'>About Us</Link></li>
-                            <li><Link className={ linkFormat }to='/'>Jobs</Link></li>
-                            <li><Link className={ linkFormat }to='/'>Press</Link></li>
-                            <li><Link className={ linkFormat }to='/'>Blog</Link></li>
+                            <li><span><Link className={ linkFormat }to='/'>About Us</Link></span></li>
+                            <li><span><Link className={ linkFormat }to='/'>Jobs</Link></span></li>
+                            <li><span><Link className={ linkFormat }to='/'>Press</Link></span></li>
+                            <li><span><Link className={ linkFormat }to='/'>Blog</Link></span></li>
                         </ul>
                     </Col>
                     
                     <Col lg={{size: 3}}>
                         <ul className={ ulFormat }>
-                            <li><Link className={ linkFormat } to='/'>Contact Us</Link></li>
-                            <li><Link className={ linkFormat } to='/'>Term</Link></li>
-                            <li><Link className={ linkFormat } to='/'>Privacy</Link></li>
+                            <li><span><Link className={ linkFormat } to='/'>Contact Us</Link></span></li>
+                            <li><span><Link className={ linkFormat } to='/'>Term</Link></span></li>
+                            <li><span><Link className={ linkFormat } to='/'>Privacy</Link></span></li>
                         </ul>
                     </Col>
                     

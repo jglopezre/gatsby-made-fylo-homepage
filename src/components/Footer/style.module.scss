@@ -1,20 +1,5 @@
 @use '../../styles/colors.scss';
 
-.ul-format{
-    li {
-        list-style: none;
-        line-height: 2rem;
-    }
-}
-
-.link-format {
-    text-decoration: none;
-    color: colors.$neutral-color-01;
-    transition: 0.2s;
-    &:hover {
-        transform: scale(1.2);
-    }
-}
 
 .main-container {
     background-color: colors.$primary-color-01;
@@ -43,5 +28,41 @@
                 padding-left: 1.2rem;
             }
         }
+    }
+}
+
+.ul-format{
+    li {
+        list-style: none;
+        line-height: 2rem;
+        span {
+            display: inline-block;
+            &:hover {
+                animation-name: link-displace;
+                animation-duration: 0.2s;
+                animation-iteration-count: 1;
+            }
+        }
+        .link-format {
+            text-decoration: none;
+            color: colors.$neutral-color-01;
+            transition: 0.1s;
+            &:hover {
+                color: colors.$accent-color-01;
+            }
+        }
+    }
+}
+
+@keyframes link-displace {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+        
     }
 }

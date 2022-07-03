@@ -7,6 +7,9 @@
     }
 }
 
+.navbar-mobile {
+
+}
 .nav-link {
     text-decoration: none;
     color: colors.$primary-color-01;
@@ -18,3 +21,9 @@
     }
 }
 
+
+@media screen and (max-width: 564px) {
+    .nav-link {
+        font-size: 0.8rem;
+    }
+}
