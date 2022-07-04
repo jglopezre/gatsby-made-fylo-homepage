@@ -1,9 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+
+
+let [defaultHeight, defaultWidth] = [];
+
+if (typeof window !== `undefined`) {
+    defaultWidth = window.innerWidth;
+    defaultHeight = window.innerHeight;
+}
 
 const useWindowResize = () => {
     const [ dimension, setDimension ] = useState({
-        windowWidth: window.innerWidth,
-        windowHeight: window.innerHeight
+        windowWidth: defaultWidth,
+        windowHeight: defaultHeight
     });
 
     useEffect(() => {

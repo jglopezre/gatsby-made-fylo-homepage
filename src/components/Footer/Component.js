@@ -11,7 +11,6 @@ import {
     elementContainer,
     logoContainer,
     socialBoxContainer } from './style.module.scss';
-import useRandomKeyGenerator from '../../customHooks/useRandomKeyGenerator';
 
 const FooterComponent = () => {
     const data = useStaticQuery(graphql `
@@ -29,6 +28,7 @@ const FooterComponent = () => {
         }
     `);
     
+    const keyGenerator = () => Math.floor(Math.random * 1000);
 
     return (
         <div className={ mainContainer }>
@@ -56,18 +56,18 @@ const FooterComponent = () => {
 
                     <Col className={ elementContainer } lg={{size: 3}}>
                         <ul className={ ulFormat }>
-                            <li key={ useRandomKeyGenerator( 1000 ) }><span><Link className={ linkFormat }to='/'>About Us</Link></span></li>
-                            <li key={ useRandomKeyGenerator( 1000 ) }><span><Link className={ linkFormat }to='/'>Jobs</Link></span></li>
-                            <li key={ useRandomKeyGenerator( 1000 ) }><span><Link className={ linkFormat }to='/'>Press</Link></span></li>
-                            <li key={ useRandomKeyGenerator( 1000 ) }><span><Link className={ linkFormat }to='/'>Blog</Link></span></li>
+                            <li key={ keyGenerator() }><span><Link className={ linkFormat }to='/'>About Us</Link></span></li>
+                            <li key={ keyGenerator() }><span><Link className={ linkFormat }to='/'>Jobs</Link></span></li>
+                            <li key={ keyGenerator() }><span><Link className={ linkFormat }to='/'>Press</Link></span></li>
+                            <li key={ keyGenerator() }><span><Link className={ linkFormat }to='/'>Blog</Link></span></li>
                         </ul>
                     </Col>
                     
                     <Col className={ elementContainer } lg={{size: 3}}>
                         <ul className={ ulFormat }>
-                            <li key={ useRandomKeyGenerator( 1000 ) }><span><Link className={ linkFormat } to='/'>Contact Us</Link></span></li>
-                            <li key={ useRandomKeyGenerator( 1000 ) }><span><Link className={ linkFormat } to='/'>Term</Link></span></li>
-                            <li key={ useRandomKeyGenerator( 1000 ) }><span><Link className={ linkFormat } to='/'>Privacy</Link></span></li>
+                            <li key={ keyGenerator() }><span><Link className={ linkFormat } to='/'>Contact Us</Link></span></li>
+                            <li key={ keyGenerator() }><span><Link className={ linkFormat } to='/'>Term</Link></span></li>
+                            <li key={ keyGenerator() }><span><Link className={ linkFormat } to='/'>Privacy</Link></span></li>
                         </ul>
                     </Col>
                     
@@ -75,7 +75,8 @@ const FooterComponent = () => {
                         <SocialBox socialIcons={{ 
                             twitter: 'https://twitter.com/', 
                             instagram: 'https://www.instagram.com/',
-                            facebook: 'https://www.facebook.com/' }}/>
+                            facebook: 'https://www.facebook.com/' }}
+                        />
                     </Col>
                 </Row>
             </Container>

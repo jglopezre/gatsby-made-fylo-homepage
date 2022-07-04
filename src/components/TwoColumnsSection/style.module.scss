@@ -6,12 +6,15 @@
     flex-direction: column;
 }
 
-.text-box, .image-box {
+.text-box, .image-box  {
     padding: {
         top: 2rem;
         bottom: 2rem;
+        left: 2rem;
+        right: 2rem;
     }
 }
+
 
 .container, .non-image-container {
     padding: {
@@ -34,6 +37,13 @@
     }
     .text-box, .children-box {
         min-width: 300px;
+    }
+}
+
+.row-style {
+    padding: {
+        top: 2rem;
+        bottom: 2rem;
     }
 }
 

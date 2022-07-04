@@ -1,5 +1,4 @@
 import React from 'react';
-import useRandomKeyGenerator from '../../customHooks/useRandomKeyGenerator';
 import { wrapper } from './style.module.scss'
 
 const SocialBox = ({
@@ -59,7 +58,7 @@ const SocialBox = ({
     <div className={ wrapper } >
       { iconSelector( socialIcons ).map( ({ icon, url }) => {
         return (
-          <a href={ url } key={ keyGenerator() } target='_blank'>
+          <a href={ url } key={ keyGenerator() } target='_blank' rel='noreferrer'>
             <div>
               { icon }
             </div>
