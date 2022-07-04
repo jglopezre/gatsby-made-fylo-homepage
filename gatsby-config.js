@@ -1,7 +1,8 @@
 module.exports = {
+  pathPrefix: `gatsby-made-fylo-homepage/`,
   siteMetadata: {
     title: `fylo-landing-page-with-gatsby-fem`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://jglopezre.github.io/gatsby-made-fylo-homepage/`
   },
   plugins: [
     "gatsby-plugin-sass",

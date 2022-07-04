@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-index-js",
     "path": "/",
-    "result": {"data":{"desktopCurve":{"publicURL":"/static/ff14250ea083647d87dcd9a91d656f94/bg-curve-desktop.svg"},"mobileCurve":{"publicURL":"/static/5f0b90e83abae7337bca43e2ee067cbe/bg-curve-mobile.svg"}},"pageContext":{}},
+    "result": {"data":{"desktopCurve":{"publicURL":"/gatsby-made-fylo-homepage/static/ff14250ea083647d87dcd9a91d656f94/bg-curve-desktop.svg"},"mobileCurve":{"publicURL":"/gatsby-made-fylo-homepage/static/5f0b90e83abae7337bca43e2ee067cbe/bg-curve-mobile.svg"}},"pageContext":{}},
     "staticQueryHashes": ["1238403539","1870075158","2883436031","707523273"]}
