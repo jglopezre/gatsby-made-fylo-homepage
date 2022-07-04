@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap';
-import { textBox, container, pictureStyle } from './style.module.scss';
+import { textBox, imageBox, container, pictureStyle, rowStyle } from './style.module.scss';
 
 const TwoColumnsSection = ({inverted, title, paragraph, picture, pictureAlt, children}) => {
     
@@ -18,8 +18,8 @@ const TwoColumnsSection = ({inverted, title, paragraph, picture, pictureAlt, chi
 
     return (
         <Container className={ container }>
-            <Row lg='2' >
-                <Col lg={{ order: first }} >
+            <Row className={ rowStyle } lg='2' >
+                <Col className={ imageBox } lg={{ order: first }} >
                     <img className={ pictureStyle } src={ picture } alt={ pictureAlt } />
                 </Col>
                 <Col className={ textBox } lg={{ order: second }}>

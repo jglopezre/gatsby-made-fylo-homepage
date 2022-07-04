@@ -50,7 +50,7 @@ const IndexPage = ({ data }) => {
         <TwoColumnsSection { ...sectionOne }>
           <EmailForm />
         </TwoColumnsSection>
-        <img src={ urlBackgroundCurveSelection( windowWidth ) } width={ windowWidth } alt='background curve' />
+        <img src={ urlBackgroundCurveSelection( windowWidth ) } width={ windowWidth } alt='' />
         <div style={ pageStyles.sectionTwo } >
           <TwoColumnsSection { ...sectionTwo }>
             <TestimonialCarousel { ...carouselContent } />

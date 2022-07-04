@@ -10,21 +10,24 @@ const NavBarComponent = () => {
     const data = useStaticQuery(graphql`
         query {
             navbarLogo: file(relativePath: {eq: "fylo-logo.svg"}) {
+                name
                 publicURL
-              }
+            }
         }
     `);
-
-    const logoAlt = 'Fylo Logo';
 
     const { windowWidth } = useWindowResize();
 
     const logoWidth = ( width ) => {
-        if( width <= 564 ) {
-            return (width * 110) / 564
+        const breakPoint = 564;
+        const logoMaxWidth = 110;
+        const logoNormalWidth = 150;
+
+        if( width <= breakPoint ) {
+            return (width * logoMaxWidth) / breakPoint
         }
         if ( width > 564 ) {
-            return 150
+            return logoNormalWidth
         }
     };
     
@@ -34,7 +37,7 @@ const NavBarComponent = () => {
                 <Navbar className={ navBar }>
                     <NavbarBrand>
                         <Link to='/'>
-                            <img src={ data.navbarLogo.publicURL } width={ logoWidth( windowWidth ) } alt= { logoAlt } />
+                            <img src={ data.navbarLogo.publicURL } width={ logoWidth( windowWidth ) } alt= { data.navbarLogo.name } />
                         </Link>
                     </NavbarBrand>
                     <Nav>

@@ -10,48 +10,52 @@
             left: 2rem;
             right: 2rem;
         }
+        .logo-container {
+            padding: {
+                top: 2rem;
+                bottom: 2rem;
+            }
+        }
+        .ul-format{
+            li {
+                list-style: none;
+                line-height: 2rem;
+                span {
+                    display: inline-block;
+                    &:hover {
+                        animation-name: link-displace;
+                        animation-duration: 0.2s;
+                        animation-iteration-count: 1;
+                    }
+                }
+                .link-format {
+                    text-decoration: none;
+                    color: colors.$neutral-color-01;
+                    transition: 0.1s;
+                    &:hover {
+                        color: colors.$accent-color-01;
+                    }
+                }
+            }
+        }
+        .contact-table {
+            tr {
+                td {
+                    color:white;
+                    &:nth-child(1) {
+                        padding-top: 0.8rem;
+                    }
+                    &:nth-child(2) {
+                        padding-left: 1.2rem;
+                    }
+                }
+            }
+        }
     }
 }
 
 .logo {
     width: 100px;
-}
-
-.contact-table {
-    tr {
-        td {
-            color:white;
-            &:nth-child(1) {
-                padding-top: 0.8rem;
-            }
-            &:nth-child(2) {
-                padding-left: 1.2rem;
-            }
-        }
-    }
-}
-
-.ul-format{
-    li {
-        list-style: none;
-        line-height: 2rem;
-        span {
-            display: inline-block;
-            &:hover {
-                animation-name: link-displace;
-                animation-duration: 0.2s;
-                animation-iteration-count: 1;
-            }
-        }
-        .link-format {
-            text-decoration: none;
-            color: colors.$neutral-color-01;
-            transition: 0.1s;
-            &:hover {
-                color: colors.$accent-color-01;
-            }
-        }
-    }
 }
 
 @keyframes link-displace {
@@ -64,5 +68,19 @@
     100% {
         transform: translateX(0);
         
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .social-box-container {
+        display: flex;
+        justify-content: center;
+        
+    }
+    .element-container {
+        padding: {
+            top: 1rem;
+            bottom: 1rem;
+        };
     }
 }

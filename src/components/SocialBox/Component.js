@@ -1,15 +1,16 @@
 import React from 'react';
+import useRandomKeyGenerator from '../../customHooks/useRandomKeyGenerator';
 import { wrapper } from './style.module.scss'
 
 const SocialBox = ({
   socialIcons = {
-    twitter: false,
-    instagram: false,
-    facebook: false,
-    linkedin: false,
-    github: false,
-    pinterest: false,
-    youtube: false,
+    twitter: null,
+    instagram: null,
+    facebook: null,
+    linkedin: null,
+    github: null,
+    pinterest: null,
+    youtube: null,
   },
   size = 24,
 }) => {
@@ -41,22 +42,28 @@ const SocialBox = ({
   const iconSelector =  ( icons ) => {
     let holder = [];
 
-    icons.twitter ? holder.push( svgIcons.twitter ) : console.log( 'no twitter') ;
-    icons.instagram ? holder.push( svgIcons.instagram ) : console.log( 'no instagram') ;
-    icons.facebook ? holder.push( svgIcons.facebook ) : console.log( 'no facebook') ;
-    icons.linkedin ? holder.push( svgIcons.linkedin ) : console.log( 'no linkedin') ;
-    icons.github ? holder.push( svgIcons.github ) : console.log( 'no github' ) ;
-    icons.pinterest ? holder.push( svgIcons.pinterest ) : console.log( 'no pinterest') ;
-    icons.youtube ? holder.push( svgIcons.youtube ) : console.log( 'no youtube') ;
+    icons.twitter ? holder.push({ icon: svgIcons.twitter, url: icons.twitter }) : console.log( 'no twitter') ;
+    icons.instagram ? holder.push({ icon: svgIcons.instagram, url: icons.instagram }) : console.log( 'no instagram') ;
+    icons.facebook ? holder.push({ icon: svgIcons.facebook, url: icons.facebook }) : console.log( 'no facebook') ;
+    icons.linkedin ? holder.push({ icon: svgIcons.linkedin, url: icons.linkedin }) : console.log( 'no linkedin') ;
+    icons.github ? holder.push({ icon: svgIcons.github, url: icons.github }) : console.log( 'no github' ) ;
+    icons.pinterest ? holder.push({ icon: svgIcons.pinterest, url: icons.pinterest }) : console.log( 'no pinterest') ;
+    icons.youtube ? holder.push({ icon: svgIcons.youtube, url: icons.youtube }) : console.log( 'no youtube') ;
 
     return holder
   }
 
+  const keyGenerator = () => Math.floor( Math.random() * 1000 );
+  
   return (
     <div className={ wrapper } >
-      { iconSelector( socialIcons ).map( (element) => {
+      { iconSelector( socialIcons ).map( ({ icon, url }) => {
         return (
-          <div>{ element }</div>
+          <a href={ url } key={ keyGenerator() } target='_blank'>
+            <div>
+              { icon }
+            </div>
+          </a>
         )
       }) }
     </div>

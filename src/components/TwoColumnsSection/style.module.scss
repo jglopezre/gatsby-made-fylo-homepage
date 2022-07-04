@@ -6,6 +6,13 @@
     flex-direction: column;
 }
 
+.text-box, .image-box {
+    padding: {
+        top: 2rem;
+        bottom: 2rem;
+    }
+}
+
 .container, .non-image-container {
     padding: {
         top: 3rem;
@@ -28,4 +35,24 @@
     .text-box, .children-box {
         min-width: 300px;
     }
+}
+
+@media screen and ( max-width: 992px ) {
+    .text-box {
+        padding: {
+            top: 2rem;
+            bottom: 2rem;
+            left: 0rem;
+            right: 0rem;
+        }
+        >h1, >p {
+            text-align: center;
+        }
+        >h1 {
+
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+    
 }
